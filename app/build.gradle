@@ -82,6 +82,23 @@ android {
     compileSdkVersion 34
     buildToolsVersion "34.0.2"
     // 他の設定...
+
+    defaultConfig {
+        applicationId "com.example.myapplicationtestnewproject"
+        minSdkVersion 33
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
@@ -89,10 +106,6 @@ android {
 
     kotlinOptions {
         jvmTarget = '11'
-    }
-
-    defaultConfig {
-        minSdkVersion 33
     }
 
 }
